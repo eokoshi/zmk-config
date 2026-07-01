@@ -13,8 +13,12 @@
 #
 ---
 include:
-  - board: planck@6.0.0//zmk
-  - board: corneish_zen_left@2.0.0//zmk
-  - board: corneish_zen_right@2.0.0//zmk
-  - board: glove80_lh
-  - board: glove80_rh
+  - board: nice_nano_v2
+    shield: eyelash_corne_right nice_view
+    artifact-name: ec_RIGHT
+  - board: nice_nano_v2
+    shield: eyelash_corne_left nice_view
+    artifact-name: ec_LEFT
+  - board: nice_nano_v2
+    shield: settings_reset
+    artifact-name: RESET
