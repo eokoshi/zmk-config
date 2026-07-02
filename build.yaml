@@ -13,12 +13,12 @@
 #
 ---
 include:
-  - board: nice_nano_v2
+  - board: nice_nano@2.0.0//zmk
     shield: eyelash_corne_right nice_view
     artifact-name: ec_RIGHT
-  - board: nice_nano_v2
+  - board: nice_nano@2.0.0//zmk
     shield: eyelash_corne_left nice_view
     artifact-name: ec_LEFT
-  - board: nice_nano_v2
+  - board: nice_nano@2.0.0//zmk
     shield: settings_reset
     artifact-name: RESET

@@ -1,10 +1,5 @@
 parse_config:
-  zmk_additional_includes:
-    - "modules/zmk/helpers/include"
-
-  zmk_preamble: |
-    #include <zmk-helpers/key-labels/34.h>
-    #define CONFIG_WIRELESS
+  zmk_remove_keycode_prefix: ["JP_"]
 
   raw_binding_map:
     "&sys_reset": Reset
@@ -26,10 +21,13 @@ parse_config:
     "&kp LG(LC(LS(A)))": PinA.
     "&kp LG(LC(LS(Q)))": PinW.
 
+    "&td0": {"t": "Shift", "left": "Caps"}
+    "&td1": {"t": "Command Prompt", "left": "MISC"}
+
     "&swapper": NWin
     "&kp LS(TAB)": PWin
     "&dot_spc": Sentence
-    "&num_dance": { "t": "Smart"}
+    "&num_dance": { "t": "Smart" }
     "&magic_shift": { "t": Magic, "h": "Shift" }
     "&smart_mouse": Smart Mouse
 
@@ -37,9 +35,9 @@ parse_config:
     "&hm_combo_ldr": Leader
     "&hm_combo_ldrsh": Shift+Leader
     "&hm_combo_lpar": { "t": "< (" }
-    "&hm_combo_rpar": { "t": "> )"}
-    "&kp LBKT": { "t": "{ ["}
-    "&kp RBKT": { "t": "} ]"}
+    "&hm_combo_rpar": { "t": "> )" }
+    "&kp LBKT": { "t": "{ [" }
+    "&kp RBKT": { "t": "} ]" }
 
     "&mmv MOVE_UP": Mouse ↑
     "&mmv MOVE_DOWN": Mouse ↓
@@ -52,17 +50,30 @@ parse_config:
     "&msc SCRL_RIGHT": Scroll →
 
     "&mkp LCLK": Left Click
+    "&mkp MB1": Left Click
     "&mkp RCLK": Right Click
+    "&mkp MB2": Right Click
     "&mkp MCLK": Middle Click
+    "&mkp MB3": Middle Click
     "&mkp MB4": Back Click
     "&mkp MB5": Forward Click
 
   trans_legend: { "t": "", "type": "trans" }
 
   zmk_combos:
-    combo_cut: { align: bottom, o: 0.15 }
-    combo_ldrsh: { align: top, o: 1.35 }
-
+    combo_lbrc: {}
+    combo_lbkt: {}
+    combo_lpar: {}
+    combo_tilde: {}
+    combo_lt: {}
+    combo_eq: {}
+    combo_rbrc: {}
+    combo_rbkt: {}
+    combo_rpar: {}
+    combo_und: {}
+    combo_gt: {}
+    combo_dash: {}
+    combo_dquo: {}
     combo_lt: { hidden: true }
     combo_gt: { hidden: true }
     combo_lbrc: { hidden: true }
@@ -85,6 +96,12 @@ parse_config:
     RET: Enter
     SPACE: Spc
     TAB: Tab
+
+    INT1: \
+    INT2: かな
+    INT3: ¥
+    INT4: Henkan
+    INT5: Muhenkan
 
     PG_UP: PgUp
     PG_DN: PgDn
@@ -175,7 +192,7 @@ parse_config:
 draw_config:
   append_colon_to_layer_header: false
   dark_mode: false
-  footer_text: "urob/zmk-config"
+  footer_text: "eokoshi/eyelash_corne.keymap"
   glyph_tap_size: 15
   glyph_hold_size: 12
   glyph_shifted_size: 10
@@ -200,15 +217,16 @@ draw_config:
         --color-num:     #d65d0e;
         --color-sys:     #689d6a;
 
-        fill: var(--color-text);
-        background-color: var(--color-bg);
-        font-family: Calibri, system-ui, sans-serif;
+        fill: #3c3836;
+        background-color: #7c6f64;
+        font-family: SUSE-Mono;
         font-size: 16px;
         font-kerning: normal;
         text-rendering: optimizeLegibility;
     }
 
     text {
+        font-family: SUSE;
         text-anchor: middle;
         dominant-baseline: middle;
         letter-spacing: 0.02em;
@@ -228,46 +246,32 @@ draw_config:
     text.combo.hold, text.combo.shifted, text.combo.left, text.combo.right { font-size: 8px; }
 
     text.label, text.footer {
-        fill: var(--color-key);
-        stroke: var(--color-bg);
+        fill: #fbf1c7;
+        stroke: #7c6f64;
         stroke-width: 4;
         paint-order: stroke;
     }
     text.label  { font-weight: bold; text-anchor: start; }
     text.footer { text-anchor: end; dominant-baseline: auto; }
 
-    rect.key, rect.combo, rect.combo-separate { fill: var(--color-key); stroke-width: 0; }
-    rect.held, rect.combo.held                { fill: var(--color-held); }
-    .layer-Combos rect.key                    { fill: var(--color-ghost); }
+    rect.key, rect.combo, rect.combo-separate { fill: #fbf1c7; stroke-width: 0; }
+    rect.held, rect.combo.held                { fill: #bdae93; }
+    .layer-Combos rect.key                    { fill: #928374; }
 
-    path.combo { stroke: var(--color-dendron); stroke-width: 2; stroke-dasharray: 2, 3; opacity: 0.45; fill: none; }
+    path.combo { stroke: #d5c4a1; stroke-width: 2; stroke-dasharray: 2, 3; opacity: 0.45; fill: none; }
 
-    text.tl, use.tl { fill: var(--color-fn); }
-    text.tr, use.tr { fill: var(--color-nav); }
-    text.bl, use.bl { fill: var(--color-num); }
-    text.br, use.br { fill: var(--color-sys); }
+    text.tl, use.tl { fill: #458588; }
+    text.tr, use.tr { fill: #d79921; }
+    text.bl, use.bl { fill: #d65d0e; }
+    text.br, use.br { fill: #689d6a; }
 
-    .keypos-30 text.hold { fill: var(--color-nav); }
-    .keypos-31 text.hold { fill: var(--color-fn); }
-    .keypos-32 text.hold { fill: var(--color-num); font-size: 15px; }
-    .keypos-32 text.tap  { fill: var(--color-num); }
+    .keypos-30 text.hold { fill: #d79921; }
+    .keypos-31 text.hold { fill: #458588; }
+    .keypos-32 text.hold { fill: #d65d0e; font-size: 15px; }
+    .keypos-32 text.tap  { fill: #d65d0e; }
     .keypos-33 text.hold { font-size: 15px; }
 
     .icon-tabler > path                             { fill: inherit; stroke: inherit; stroke-width: 2; }
     .icon-tabler > path[stroke="none"][fill="none"] { visibility: hidden; }
 
-    @media (prefers-color-scheme: dark) {
-        svg.keymap {
-            --color-bg:      #a89984;
-            --color-key:     #282828;
-            --color-text:    #ebdbb2;
-            --color-ghost:   #928374;
-            --color-dendron: #504945;
-            --color-held:    #665c54;
-
-            --color-fn:      #458588;
-            --color-nav:     #fabd2f;
-            --color-num:     #d65d0e;
-            --color-sys:     #689d6a;
-        }
     }
