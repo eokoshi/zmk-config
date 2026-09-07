@@ -11,24 +11,10 @@ manifest:
       import: app/west.yml
 
     # ZMK modules
-    - name: zmk-adaptive-key
-      path: modules/zmk/adaptive-key
-      revision: e5b335a7b1076cb122582f5a892b118b02a3be34 # main (2026-08-18)
-    - name: zmk-auto-layer
-      path: modules/zmk/auto-layer
-      revision: 62c201934711369d50a28df12e1d055d05cb6460 # main (2026-08-18)
-    - name: zmk-helpers
-      path: modules/zmk/helpers
-      revision: 95edb8f15ef1d1bd8332810555f8cf5837fbdd27 # main (2026-08-31)
-    - name: zmk-leader-key
-      path: modules/zmk/leader-key
-      revision: e894d9afa5164b7fff641db4194fc3d4d6e84bbb # main (2026-08-18)
-    - name: zmk-tri-state
-      path: modules/zmk/tri-state
-      revision: 0c6eaf55d2da0d85b943e02d72831c2d8ea64501 # main (2026-08-31)
-    - name: zmk-unicode
-      path: modules/zmk/unicode
-      revision: 5f458b6f1fd8ca83f4aba793c2a64916522507e9 # main (2026-08-31)
+    - name: zmk-keyboards-eyelash_corne
+      remote: eokoshi
+      revision: b84c6166fb4642023de7d253b837eed11e4139e6 # main (2026-09-07)
+      path: modules/zmk/eyelash_corne
 
     # Avoid downloading GBs of unused Zephyr modules. Remove this section to
     # restore the default (needed for less common hardware).
@@ -41,8 +27,8 @@ manifest:
           - cmsis
           - hal_nordic
           - hal_rpi_pico
-          - hal_stm32  # imported independently by ZMK
-          - lvgl  # imported independently by ZMK
+          - hal_stm32 # imported independently by ZMK
+          - lvgl # imported independently by ZMK
           - mbedtls
           - tinycrypt
 

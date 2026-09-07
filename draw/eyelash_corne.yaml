@@ -1,0 +1,360 @@
+layout: {zmk_keyboard: eyelash_corne}
+layers:
+  Base:
+    - {t: Tab, h: Gui}
+    - Q
+    - W
+    - E
+    - R
+    - T
+    - Mouse ↑
+    - Y
+    - U
+    - I
+    - O
+    - P
+    - Bspc
+    - Shift
+    - A
+    - S
+    - D
+    - F
+    - G
+    - Mouse ←
+    - Left Click
+    - Mouse →
+    - H
+    - J
+    - K
+    - L
+    - ;
+    - {t: '''', h: Shift}
+    - Ctrl
+    - Z
+    - X
+    - C
+    - V
+    - B
+    - {t: Command Prompt, left: MISC}
+    - Mouse ↓
+    - N
+    - M
+    - ','
+    - .
+    - /
+    - {t: \, h: Ctrl}
+    - Alt
+    - {t: Esc, h: Sym}
+    - {t: Tab, h: Num}
+    - {t: ENTER, h: Nav}
+    - Spc
+    - {t: Del, h: Fn}
+  Num:
+    - {type: trans}
+    - '['
+    - '7'
+    - '8'
+    - '9'
+    - '='
+    - {type: trans}
+    - '['
+    - '7'
+    - '8'
+    - '9'
+    - '='
+    - {type: trans}
+    - {type: trans}
+    - '-'
+    - '4'
+    - '5'
+    - '6'
+    - ','
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - '-'
+    - '4'
+    - '5'
+    - '6'
+    - Sft+;
+    - Sft+'
+    - {type: trans}
+    - '0'
+    - '1'
+    - '2'
+    - '3'
+    - .
+    - {type: trans}
+    - {type: trans}
+    - '0'
+    - '1'
+    - '2'
+    - '3'
+    - .
+    - ','
+    - {type: trans}
+    - {type: trans}
+    - {type: held}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+  Sym:
+    - {type: trans}
+    - Sft+CAPS
+    - Muhenkan
+    - '`'
+    - Gui+Spc
+    - {type: trans}
+    - {type: trans}
+    - Sft+[
+    - Sft+7
+    - Sft+8
+    - (
+    - Sft+=
+    - {type: trans}
+    - {type: trans}
+    - Alt+Tab
+    - Spc
+    - ENTER
+    - Bspc
+    - Del
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - Sft+-
+    - Sft+4
+    - Sft+5
+    - Sft+6
+    - Sft+¥
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - Sft+\
+    - Sft+1
+    - Sft+2
+    - Sft+3
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: held}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+  Fn:
+    - {type: trans}
+    - F9
+    - F10
+    - F11
+    - F12
+    - {type: trans}
+    - {type: trans}
+    - '['
+    - '7'
+    - '8'
+    - '9'
+    - '='
+    - {type: trans}
+    - {type: trans}
+    - F5
+    - F6
+    - F7
+    - F8
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - '-'
+    - '4'
+    - '5'
+    - '6'
+    - Sft+;
+    - Sft+'
+    - {type: trans}
+    - F1
+    - F2
+    - F3
+    - F4
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - '0'
+    - '1'
+    - '2'
+    - '3'
+    - .
+    - ','
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: held}
+  Sys:
+    - Reset
+    - {t: Sys, h: toggle}
+    - {t: Sys, h: toggle}
+    - {t: Sys, h: toggle}
+    - BT CLR
+    - BT NXT
+    - RGB HUI
+    - {t: Sys, h: toggle}
+    - {t: Sys, h: toggle}
+    - {t: Sys, h: toggle}
+    - {t: Sys, h: toggle}
+    - {t: Sys, h: toggle}
+    - {t: Sys, h: toggle}
+    - Boot
+    - {t: Sys, h: toggle}
+    - {t: Sys, h: toggle}
+    - {t: Sys, h: toggle}
+    - BT CLR ALL
+    - BT PRV
+    - RGB SAD
+    - '&td3'
+    - RGB SAI
+    - RGB SPD
+    - RGB EFF
+    - RGB EFR
+    - RGB SPI
+    - {t: Sys, h: toggle}
+    - {t: Sys, h: toggle}
+    - {t: Sys, h: toggle}
+    - {t: Sys, h: toggle}
+    - {t: Sys, h: toggle}
+    - {t: Sys, h: toggle}
+    - {t: Sys, h: toggle}
+    - {t: Sys, h: toggle}
+    - {t: Sys, h: toggle}
+    - RGB HUD
+    - {t: Sys, h: toggle}
+    - {t: Sys, h: toggle}
+    - {t: Sys, h: toggle}
+    - {t: Sys, h: toggle}
+    - {t: Sys, h: toggle}
+    - {t: Sys, h: toggle}
+    - {t: Sys, h: toggle}
+    - {t: Sys, h: toggle}
+    - {t: Sys, h: toggle}
+    - {t: Sys, h: toggle}
+    - {t: Sys, h: toggle}
+    - {t: Sys, h: toggle}
+  Nav:
+    - Close
+    - {type: trans}
+    - Scroll ↑
+    - Mouse ↑
+    - Scroll ↓
+    - {type: trans}
+    - {type: trans}
+    - Home
+    - PgUp
+    - PgDn
+    - End
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - Scroll ←
+    - Mouse ←
+    - Mouse ↓
+    - Mouse →
+    - Scroll →
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - ←
+    - ↓
+    - ↑
+    - →
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - Left Click
+    - Right Click
+    - {type: held}
+    - {type: trans}
+    - {type: trans}
+  Combos: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '',
+    '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '',
+    '', '', '', '', '', '', '', '', '', '']
+combos:
+  - p: [0, 1, 2]
+    k: '&soft_off'
+    l:
+      - Combos
+  - p: [14, 15]
+    k: Sft+]
+    hidden: true
+    l:
+      - Combos
+  - p: [15, 16]
+    k: ']'
+    l:
+      - Combos
+  - p: [16, 17]
+    k: Sft+8
+    l:
+      - Combos
+  - p: [14, 17]
+    k: Sft+=
+    l:
+      - Combos
+  - p: [14, 18]
+    k: Sft+,
+    hidden: true
+    l:
+      - Combos
+  - p: [15, 17]
+    k: Sft+-
+    l:
+      - Combos
+  - p: [25, 26]
+    k: Sft+\
+    hidden: true
+    l:
+      - Combos
+  - p: [24, 25]
+    k: \
+    l:
+      - Combos
+  - p: [23, 24]
+    k: (
+    l:
+      - Combos
+  - p: [23, 26]
+    k: Sft+\
+    l:
+      - Combos
+  - p: [22, 26]
+    k: Sft+.
+    hidden: true
+    l:
+      - Combos
+  - p: [22, 23]
+    k: '-'
+    l:
+      - Combos
+  - p: [23, 25]
+    k: Sft+2
+    l:
+      - Combos
